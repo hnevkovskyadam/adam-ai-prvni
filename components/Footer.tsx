@@ -1,22 +1,20 @@
-import { Github, Linkedin, Mail } from 'lucide-react'
+'use client'
+
+import { Heart } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground p-8 mt-12">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="text-center md:text-left mb-4 md:mb-0">
-          <p>&copy; {new Date().getFullYear()} Moje Portfolio. Všechna práva vyhrazena.</p>
-        </div>
-        <div className="flex space-x-4">
-          <a href="https://github.com/username" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground/80">
-            <Github size={24} />
-          </a>
-          <a href="https://www.linkedin.com/in/username" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground/80">
-            <Linkedin size={24} />
-          </a>
-          <a href="mailto:jmeno@example.com" className="hover:text-primary-foreground/80">
-            <Mail size={24} />
-          </a>
+    <footer className="py-8 border-t">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col items-center justify-center space-y-2">
+          <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+            <span>Vytvořeno s</span>
+            <Heart className="w-4 h-4 text-primary" />
+            <span>v České republice</span>
+          </div>
+          <div className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} Mé Portfolio. Všechna práva vyhrazena.
+          </div>
         </div>
       </div>
     </footer>
